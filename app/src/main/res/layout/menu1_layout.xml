@@ -1,14 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="1"
-        android:id="@+id/textView"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/vision1"
+                android:id="@+id/vision1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp" />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu1_line"
+                android:layout_alignLeft="@id/vision1"
+                android:layout_alignStart="@id/vision1"
+                android:layout_alignRight="@id/vision1"
+                android:layout_alignEnd="@id/vision1"
+                android:contentDescription="@null"
+                android:id="@+id/line1"
+                android:layout_below="@id/vision1"/>
+
+            <TextView
+                android:id="@+id/bullet1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/vision1"
+                android:layout_alignStart="@id/vision1"
+                android:layout_below="@id/line1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/bullet_point"/>
+            <TextView
+                android:id="@+id/vision1_content1a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/bullet1"
+                android:layout_toEndOf="@id/bullet1"
+                android:layout_alignRight="@id/vision1"
+                android:layout_alignEnd="@id/vision1"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/line1"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/vision1_content1a"/>
+
+            <TextView
+                android:id="@+id/vision1_content1b"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/vision1"
+                android:layout_alignStart="@id/vision1"
+                android:layout_alignRight="@id/vision1"
+                android:layout_alignEnd="@id/vision1"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/vision1_content1a"
+                android:gravity="end"
+                android:text="@string/vision1_content1b"/>
+
+            <TextView
+                android:id="@+id/bullet2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/vision1"
+                android:layout_alignStart="@id/vision1"
+                android:layout_below="@id/vision1_content1b"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/bullet_point"/>
+            <TextView
+                android:id="@+id/vision1_content2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/vision1"
+                android:layout_alignEnd="@id/vision1"
+                android:layout_toRightOf="@id/bullet2"
+                android:layout_toEndOf="@id/bullet2"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/vision1_content1b"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/vision1_content2"/>
+
+            <TextView
+                android:id="@+id/bullet3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/vision1"
+                android:layout_alignStart="@id/vision1"
+                android:layout_below="@id/vision1_content2"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/bullet_point"/>
+            <TextView
+                android:id="@+id/vision1_content3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/vision1"
+                android:layout_alignEnd="@id/vision1"
+                android:layout_toRightOf="@id/bullet2"
+                android:layout_toEndOf="@id/bullet2"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@id/vision1_content2"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/vision1_content3"/>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
