@@ -1,5 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="8"
+    android:orientation="horizontal"
+    android:useDefaultMargins="true" >
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:layout_rowSpan="10"
+        android:columnCount="1"
+        android:rowCount="10"
+        android:orientation="horizontal"
+        android:useDefaultMargins="true" >
+
+        <TextView android:text="10" />
+
+        <TextView android:text="9" />
+
+        <TextView android:text="8" />
+
+        <TextView android:text="7" />
+
+        <TextView android:text="6" />
+
+        <TextView android:text="5" />
+
+        <TextView android:text="4" />
+
+        <TextView android:text="3" />
+
+        <TextView android:text="2" />
+
+        <TextView android:text="1" />
+
+    </GridLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_rowWeight="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="7"
+        android:layout_rowSpan="10"
+        android:layout_gravity="fill"
+        android:useDefaultMargins="true" >
+
+        <TextView
+            android:text="blank"
+            android:layout_gravity="center"
+            />
+    </GridLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_rowWeight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:layout_rowSpan="1"
+        android:useDefaultMargins="true" >
+
+        <TextView android:text="0" />
+    </GridLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_rowWeight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="7"
+        android:layout_rowSpan="1"
+        android:columnCount="10"
+        android:background="#c0c0c0"
+        android:useDefaultMargins="true" >
+
+        <TextView android:text="10   " />
+
+        <TextView android:text="20   " />
+
+        <TextView android:text="30   " />
+
+        <TextView android:text="40   " />
+
+        <TextView android:text="50   " />
+
+        <TextView android:text="60   " />
+
+        <TextView android:text="70   " />
+
+        <TextView android:text="80   " />
+
+        <TextView android:text="90   " />
+
+        <TextView android:text="100   " />
+    </GridLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_rowWeight="10"
+        android:layout_columnSpan="1"
+        android:layout_rowSpan="10"
+        android:columnCount="1"
+        android:rowCount="10"
+        android:orientation="horizontal"
+        android:useDefaultMargins="true" >
+
+        <TextView android:text="1" />
+
+        <TextView android:text="2" />
+
+        <TextView android:text="3" />
+
+        <TextView android:text="4" />
+
+        <TextView android:text="5" />
+
+        <TextView android:text="6" />
+
+        <TextView android:text="7" />
+
+        <TextView android:text="8" />
+
+        <TextView android:text="9" />
+
+        <TextView android:text="10" />
+
+    </GridLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_rowWeight="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="7"
+        android:layout_rowSpan="10"
+        android:layout_gravity="fill"
+        android:useDefaultMargins="true" >
+
+        <TextView
+            android:text="blank2"
+            android:layout_gravity="center"
+            />
+    </GridLayout>
+
+</GridLayout>
+
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
@@ -11,4 +154,4 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp" />
-</RelativeLayout>
+</RelativeLayout> !>
