@@ -35,18 +35,25 @@
                 android:contentDescription="@null"
                 android:id="@+id/my_line1"
                 android:layout_below="@id/my_vision1"/>
-            <com.example.chocho.visiongraph.EditView
-                android:id="@+id/my_vision1_answer"
+            <ImageButton
+                android:id="@+id/edit_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit_button"
+                android:contentDescription="@null"
+                android:layout_alignRight="@id/my_vision1"
+                android:layout_alignEnd="@id/my_vision1"
+                android:layout_below="@id/my_line1" />
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/my_vision1"
                 android:layout_alignStart="@id/my_vision1"
-                android:layout_alignRight="@id/my_vision1"
-                android:layout_alignEnd="@id/my_vision1"
-                android:layout_marginRight="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_below="@id/my_line1"
-                android:lineSpacingExtra="5dp" />
+                android:layout_toLeftOf="@id/edit_button1"
+                android:layout_toStartOf="@id/edit_button1"
+                android:id="@+id/my_vision1_answer"
+                android:layout_below="@id/my_line1" />
+
 
             <TextView
                 android:layout_width="fill_parent"
@@ -59,7 +66,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="30dp"
-                android:layout_below="@id/my_vision1_answer"/>
+                android:layout_below="@id/edit_button1"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -71,18 +78,25 @@
                 android:contentDescription="@null"
                 android:id="@+id/my_line2"
                 android:layout_below="@id/my_vision2"/>
-            <com.example.chocho.visiongraph.EditView
-                android:id="@+id/my_vision2_answer"
+            <ImageButton
+                android:id="@+id/edit_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit_button"
+                android:contentDescription="@null"
+                android:layout_alignRight="@id/my_vision1"
+                android:layout_alignEnd="@id/my_vision1"
+                android:layout_below="@id/my_line2" />
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/my_vision1"
                 android:layout_alignStart="@id/my_vision1"
                 android:layout_alignRight="@id/my_vision1"
                 android:layout_alignEnd="@id/my_vision1"
-                android:layout_marginRight="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_below="@id/my_line2"
-                android:lineSpacingExtra="5dp"/>
+                android:id="@+id/my_vision2_answer"
+                android:layout_below="@id/my_line2" />
+
 
             <TextView
                 android:layout_width="fill_parent"
@@ -95,7 +109,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="30dp"
-                android:layout_below="@id/my_vision2_answer"/>
+                android:layout_below="@id/edit_button2"/>
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -107,18 +121,25 @@
                 android:contentDescription="@null"
                 android:id="@+id/my_line3"
                 android:layout_below="@id/my_vision3"/>
-            <com.example.chocho.visiongraph.EditView
-                android:id="@+id/my_vision3_answer"
+            <ImageButton
+                android:id="@+id/edit_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit_button"
+                android:contentDescription="@null"
+                android:layout_alignRight="@id/my_vision1"
+                android:layout_alignEnd="@id/my_vision1"
+                android:layout_below="@id/my_line3" />
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/my_vision1"
                 android:layout_alignStart="@id/my_vision1"
                 android:layout_alignRight="@id/my_vision1"
                 android:layout_alignEnd="@id/my_vision1"
-                android:layout_marginRight="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_below="@id/my_line3"
-                android:lineSpacingExtra="5dp"/>
+                android:id="@+id/my_vision3_answer"
+                android:layout_below="@id/my_line3" />
+
 
         </RelativeLayout>
     </ScrollView>
