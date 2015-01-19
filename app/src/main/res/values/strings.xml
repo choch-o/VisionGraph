@@ -6,9 +6,9 @@
     <string name="title_section2">인생 그래프</string>
     <string name="title_section3">나의 비전</string>
     <string name="vision1">비전이란</string>
-    <string name="bullet_point">&#8226;</string>
+    <string name="bullet_point">•</string>
     <string name="vision1_content1a">\'비전은 자신이 누구이고, 어디로 가고 있으며, 무엇이 그 여정을 인도할지 아는 것이다\'</string>
-    <string name="vision1_content1b">- 켄 블랜차드 &lt;비전으로 가슴을 뛰게 하라&gt;</string>
+    <string name="vision1_content1b">- 켄 블랜차드 &lt;비전으로 가슴을 뛰게 하라></string>
     <string name="vision1_content2">\'비전은 개인이 미래에 달성하고자 하는 모습이다.\'</string>
     <string name="vision1_content3">\'비전은 모든 사람들이 선호하고 창조하고자 하는 미래에 대한 그림이며, 나침반이다.\'</string>
     <string name="vision2">비전 발견</string>
@@ -25,5 +25,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
