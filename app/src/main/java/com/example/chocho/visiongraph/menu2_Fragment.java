@@ -97,7 +97,7 @@ public class menu2_Fragment extends Fragment {
                 }
             });
         }
-
+        
         return rootview;
     }
 
