@@ -13,28 +13,48 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:src="@drawable/num1"
+                android:id="@+id/num1"
+                android:contentDescription="@null"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="21sp"
                 android:text="@string/my_vision1"
                 android:id="@+id/my_vision1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
+                android:layout_alignBottom="@id/num1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="30dp" />
-            <ImageView
+                android:layout_toRightOf="@id/num1"
+                android:layout_toEndOf="@id/num1"/>
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/menu1_line"
-                android:layout_alignLeft="@id/my_vision1"
-                android:layout_alignStart="@id/my_vision1"
-                android:layout_alignRight="@id/my_vision1"
-                android:layout_alignEnd="@id/my_vision1"
-                android:contentDescription="@null"
-                android:id="@+id/my_line1"
-                android:layout_below="@id/my_vision1"/>
+                android:text="@string/if_possible"
+                android:textSize="18sp"
+                android:id="@+id/if_possible1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_above="@id/my_vision1"
+                android:layout_marginBottom="3dp"
+                android:layout_toRightOf="@id/num1"
+                android:layout_toEndOf="@id/num1"/>
             <ImageButton
                 android:id="@+id/edit_button1"
                 android:layout_width="wrap_content"
@@ -43,7 +63,7 @@
                 android:contentDescription="@null"
                 android:layout_alignRight="@id/my_vision1"
                 android:layout_alignEnd="@id/my_vision1"
-                android:layout_below="@id/my_line1" />
+                android:layout_below="@id/my_vision1" />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -51,33 +71,48 @@
                 android:layout_alignStart="@id/my_vision1"
                 android:layout_toLeftOf="@id/edit_button1"
                 android:layout_toStartOf="@id/edit_button1"
+                android:layout_marginTop="20dp"
                 android:id="@+id/my_vision1_answer"
-                android:layout_below="@id/my_line1" />
+                android:layout_below="@id/my_vision1" />
 
 
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:src="@drawable/num2"
+                android:id="@+id/num2"
+                android:contentDescription="@null"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/my_vision1_answer"/>
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="21sp"
                 android:text="@string/my_vision2"
                 android:id="@+id/my_vision2"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_below="@id/edit_button1"/>
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/menu1_line"
                 android:layout_alignLeft="@id/my_vision1"
                 android:layout_alignStart="@id/my_vision1"
-                android:layout_alignRight="@id/my_vision1"
-                android:layout_alignEnd="@id/my_vision1"
-                android:contentDescription="@null"
-                android:id="@+id/my_line2"
-                android:layout_below="@id/my_vision2"/>
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignBottom="@id/num2"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/if_possible"
+                android:textSize="18sp"
+                android:id="@+id/if_possible2"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="3dp"
+                android:layout_alignLeft="@id/my_vision1"
+                android:layout_alignStart="@id/my_vision1"
+                android:layout_above="@id/my_vision2"/>
             <ImageButton
                 android:id="@+id/edit_button2"
                 android:layout_width="wrap_content"
@@ -86,41 +121,56 @@
                 android:contentDescription="@null"
                 android:layout_alignRight="@id/my_vision1"
                 android:layout_alignEnd="@id/my_vision1"
-                android:layout_below="@id/my_line2" />
+                android:layout_below="@id/my_vision2" />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/my_vision1"
                 android:layout_alignStart="@id/my_vision1"
-                android:layout_alignRight="@id/my_vision1"
-                android:layout_alignEnd="@id/my_vision1"
+                android:layout_toLeftOf="@id/edit_button2"
+                android:layout_toStartOf="@id/edit_button2"
+                android:layout_marginTop="20dp"
                 android:id="@+id/my_vision2_answer"
-                android:layout_below="@id/my_line2" />
+                android:layout_below="@id/my_vision2" />
 
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/my_vision3"
-                android:id="@+id/my_vision3"
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:src="@drawable/num3"
+                android:id="@+id/num3"
+                android:contentDescription="@null"
+                android:layout_marginTop="30dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_below="@id/edit_button2"/>
-            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/my_vision2_answer"/>
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/menu1_line"
+                android:textSize = "21sp"
+                android:text="@string/my_vision3"
+                android:id="@+id/my_vision3"
                 android:layout_alignLeft="@id/my_vision1"
                 android:layout_alignStart="@id/my_vision1"
-                android:layout_alignRight="@id/my_vision1"
-                android:layout_alignEnd="@id/my_vision1"
-                android:contentDescription="@null"
-                android:id="@+id/my_line3"
-                android:layout_below="@id/my_vision3"/>
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignBottom="@id/num3"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/if_possible"
+                android:textSize="18sp"
+                android:id="@+id/if_possible3"
+                android:layout_alignLeft="@id/my_vision1"
+                android:layout_alignStart="@id/my_vision1"
+                android:layout_above="@id/my_vision3"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="3dp" />
             <ImageButton
                 android:id="@+id/edit_button3"
                 android:layout_width="wrap_content"
@@ -129,17 +179,22 @@
                 android:contentDescription="@null"
                 android:layout_alignRight="@id/my_vision1"
                 android:layout_alignEnd="@id/my_vision1"
-                android:layout_below="@id/my_line3" />
+                android:layout_below="@id/my_vision3" />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/my_vision1"
                 android:layout_alignStart="@id/my_vision1"
-                android:layout_alignRight="@id/my_vision1"
-                android:layout_alignEnd="@id/my_vision1"
+                android:layout_toLeftOf="@id/edit_button3"
+                android:layout_toStartOf="@id/edit_button3"
+                android:layout_marginTop="20dp"
                 android:id="@+id/my_vision3_answer"
-                android:layout_below="@id/my_line3" />
+                android:layout_below="@id/my_vision3" />
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/my_vision3_answer"/>
 
         </RelativeLayout>
     </ScrollView>
