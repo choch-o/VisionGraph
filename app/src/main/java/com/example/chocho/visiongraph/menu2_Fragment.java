@@ -6,10 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Point;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -20,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -48,7 +47,6 @@ public class menu2_Fragment extends Fragment {
             rootview.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
                 public void onGlobalLayout() {
-                    Log.w("a", "b");
                     width = rootview.getMeasuredWidth();
                     height = rootview.getMeasuredHeight();
                     y_axis = width / 16;
@@ -57,9 +55,9 @@ public class menu2_Fragment extends Fragment {
                     y_axis_height = (height - 20) / 21;
 
                     frameLayout = (FrameLayout) rootview.findViewById(R.id.container);
-                    frameLayout.addView(new axis(getActivity()));
+                    frameLayout.addView(new axis(rootview.getContext()));
 
-                    textView = new TextView(getActivity());
+                    textView = new TextView(rootview.getContext());
                     textView.setWidth((int)y_axis_width);
                     textView.setHeight((int)y_axis_height);
                     textView.setPadding((int)y_axis, (int)x_axis, 0, 0);
@@ -70,7 +68,7 @@ public class menu2_Fragment extends Fragment {
 
                     //y-axis text
                     for (int i = 0; i <= 20; i++) {
-                        textView = new TextView(getActivity());
+                        textView = new TextView(rootview.getContext());
                         textView.setWidth((int)y_axis_width);
                         textView.setHeight((int)y_axis_height);
                         textView.setPadding(10, 25 + (int)y_axis_height * i, 0, 0);
@@ -84,7 +82,7 @@ public class menu2_Fragment extends Fragment {
 
                     //x-axis text
                     for (int i = 0; i <= 9; i++) {
-                        textView = new TextView(getActivity());
+                        textView = new TextView(rootview.getContext());
                         textView.setWidth((int)y_axis_width);
                         textView.setHeight((int)y_axis_height);
                         if(i == 0) textView.setPadding((int)(y_axis * 2 + y_axis * 14 / 10 * i), (int)x_axis + 5, 0, 0);
@@ -94,6 +92,15 @@ public class menu2_Fragment extends Fragment {
                         textView.setTextColor(Color.BLACK);
                         frameLayout.addView(textView);
                     }
+
+                    //add-butten
+                    ImageButton addButton;
+
+                    addButton = new ImageButton(rootview.getContext());
+                    addButton.setBackground(null);
+                    addButton.setImageResource(R.drawable.plus_image);
+                    addButton.setPadding((int)y_axis*14, (int)(x_axis / 4 * 7), 0, 0);
+                    frameLayout.addView(addButton);
                 }
             });
         }
@@ -123,11 +130,6 @@ public class menu2_Fragment extends Fragment {
             int[] years = new int[n];
             int[] point = new int[n];
 
-            /*years[0] = 10; point[0] = 5;
-            years[1] = 15; point[1] = -5;
-            years[2] = 30; point[2] = 10;
-            years[3] = 50; point[3] = 9;
-            years[4] = 90; point[4] = 0;*/
             years[0] = 10; point[0] = 0;
             years[1] = 10; point[1] = 1;
             years[2] = 10; point[2] = 2;
