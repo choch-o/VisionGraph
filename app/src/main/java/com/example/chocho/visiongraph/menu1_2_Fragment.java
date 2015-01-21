@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -100,6 +101,8 @@ public class menu1_2_Fragment extends Fragment implements View.OnClickListener{
                     intent.putExtra("content", new String(d));
                     startActivityForResult(intent, 1);
                 } catch (FileNotFoundException e) {
+                    intent.putExtra("num", 1);
+                    startActivityForResult(intent, 1);
                 } catch (Exception e) {}
 
                 break;
@@ -113,6 +116,8 @@ public class menu1_2_Fragment extends Fragment implements View.OnClickListener{
                     intent.putExtra("content", new String(d2));
                     startActivityForResult(intent, 1);
                 } catch (FileNotFoundException e) {
+                    intent.putExtra("num", 2);
+                    startActivityForResult(intent, 1);
                 } catch (Exception e) {}
 
                 break;
@@ -126,6 +131,8 @@ public class menu1_2_Fragment extends Fragment implements View.OnClickListener{
                     intent.putExtra("content", new String(d3));
                     startActivityForResult(intent, 1);
                 } catch (FileNotFoundException e) {
+                    intent.putExtra("num", 3);
+                    startActivityForResult(intent, 1);
                 } catch (Exception e) {}
 
                 break;

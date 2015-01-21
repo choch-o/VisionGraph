@@ -35,8 +35,8 @@ public class eventAddActivity extends ActionBarActivity {
                             MainActivity.ddbbEventAge[ MainActivity.ddbbEventCnt ] = Integer.parseInt(addAge.getText().toString());
                             MainActivity.ddbbEventScore[ MainActivity.ddbbEventCnt ] = Integer.parseInt(addScore.getText().toString());
 
-                            Intent intent = new Intent(eventAddActivity.this, MainActivity.class);
-                            startActivity(intent);
+                            Intent intent = new Intent();
+                            setResult(RESULT_OK, intent);
                             finish();
                         }
                         else {

@@ -34,6 +34,10 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    public static String[] ddbbEventName = new String[200];
+    public static int[] ddbbEventAge = new int[200];
+    public static int[] ddbbEventScore = new int[200];
+    public static int ddbbEventCnt = 0;
 
     /*
     static Answer answer1;

@@ -140,7 +140,7 @@
                 android:src="@drawable/num3"
                 android:id="@+id/num3"
                 android:contentDescription="@null"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginRight="10dp"

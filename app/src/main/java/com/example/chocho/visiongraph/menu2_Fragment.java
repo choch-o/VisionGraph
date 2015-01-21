@@ -25,6 +25,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.io.FileOutputStream;
+
 /**
  * Created by chocho on 2015-01-07.
  */
@@ -109,8 +111,8 @@ public class menu2_Fragment extends Fragment {
                     addButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                             Log.w("menu2_fragment - ", "add");
-                            //Intent intent = new Intent(getActivity(), eventAddActivity.class);
-                            //startActivity(intent);
+                            Intent intent = new Intent(getActivity(), eventAddActivity.class);
+                            startActivityForResult(intent, 1);
                         }
                     });
 
@@ -121,11 +123,16 @@ public class menu2_Fragment extends Fragment {
         return rootview;
     }
 
-    /*public void onClick(View view)
-    {
-        Intent intent = new Intent(getActivity(), eventAddActivity.class);
-        startActivity(intent);
-    }*/
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+
+            }
+        }
+    }
 
     private class axis extends View{
         Paint paint = new Paint();
