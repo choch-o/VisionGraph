@@ -17,9 +17,10 @@
     <string name="vision2_content3">나는 누구를 위해, 무엇을 위해 살고 싶은가?</string>
     <string name="vision2_content4">내 인생에서 나의 최고의 직업은 무엇인가?</string>
     <string name="vision_people">비전의 사람들</string>
-    <string name="my_vision1">모든 것이 가능하다면 어디서 무엇을 하고 싶은가?</string>
-    <string name="my_vision2">모든 것이 가능하다면 나는 어떤 사람이 되고 싶은가?</string>
-    <string name="my_vision3">모든 것이 가능하다면 나는 무엇을 위해서, 누구를 위해서 살고 싶은가?</string>
+    <string name="if_possible">모든 것이 가능하다면</string>
+    <string name="my_vision1">어디서 무엇을 하고 싶은가?</string>
+    <string name="my_vision2">나는 어떤 사람이 되고 싶은가?</string>
+    <string name="my_vision3">나는 무엇을 위해서, 누구를 위해서 살고 싶은가?</string>
     <string name="vision_statement">나의 비전 선언문</string>
     <string name="done">완료</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

@@ -1,6 +1,9 @@
 package com.example.chocho.visiongraph;
 
 import android.app.Activity;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -32,6 +35,13 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
 
+    /*
+    static Answer answer1;
+    static Answer answer2;
+    static Answer answer3;
+
+    static DatabaseHandler db;
+    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +55,15 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        /*
+        db = new DatabaseHandler(this);
+        answer1 = new Answer("");
+        answer2 = new Answer("");
+        answer3 = new Answer("");
+        db.addAnswer(answer1);
+        db.addAnswer(answer2);
+        db.addAnswer(answer3);
+        */
     }
 
     @Override
@@ -147,8 +166,8 @@ public class MainActivity extends ActionBarActivity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
+            View rootview = inflater.inflate(R.layout.fragment_main, container, false);
+            return rootview;
         }
 
         @Override
@@ -158,5 +177,4 @@ public class MainActivity extends ActionBarActivity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
-
 }
