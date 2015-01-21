@@ -2,6 +2,8 @@ package com.example.chocho.visiongraph;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -101,12 +103,29 @@ public class menu2_Fragment extends Fragment {
                     addButton.setImageResource(R.drawable.plus_image);
                     addButton.setPadding((int)y_axis*14, (int)(x_axis / 4 * 7), 0, 0);
                     frameLayout.addView(addButton);
+
+                    //add-activity
+                    //addButton.setOnClickListener(this);
+                    addButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            Log.w("menu2_fragment - ", "add");
+                            //Intent intent = new Intent(getActivity(), eventAddActivity.class);
+                            //startActivity(intent);
+                        }
+                    });
+
                 }
             });
         }
 
         return rootview;
     }
+
+    /*public void onClick(View view)
+    {
+        Intent intent = new Intent(getActivity(), eventAddActivity.class);
+        startActivity(intent);
+    }*/
 
     private class axis extends View{
         Paint paint = new Paint();
@@ -126,7 +145,7 @@ public class menu2_Fragment extends Fragment {
 
             //evnet_point
             //10 years, 5 point
-            int n = 29;
+            /*int n = 29;
             int[] years = new int[n];
             int[] point = new int[n];
 
@@ -160,10 +179,13 @@ public class menu2_Fragment extends Fragment {
             years[27] = 80; point[21] = 0;
             years[28] = 90; point[21] = 0;
 
-            paint.setColor(Color.parseColor("#FF0000"));
-
             for(int i = 0 ; i < n ; i ++ ) {
                 canvas.drawCircle(y_axis * 2 + y_axis * 14 / 100 * years[i], x_axis - point[i] * y_axis_height, 3, paint);
+            }*/
+
+            paint.setColor(Color.parseColor("#FF0000"));
+            for(int i = 1 ; i <= MainActivity.ddbbEventCnt ; i ++ ) {
+                canvas.drawCircle(y_axis * 2 + y_axis * 14 / 100 * MainActivity.ddbbEventAge[i], x_axis - MainActivity.ddbbEventScore[i] * y_axis_height, 4, paint);
             }
         }
     }
