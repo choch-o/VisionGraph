@@ -1,9 +1,11 @@
 package com.example.chocho.visiongraph;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,25 +13,27 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class eventAddActivity extends ActionBarActivity {
-    Button addButton;
+public class eventAddActivity extends Activity {
+    Button addButton2;
     EditText addName, addAge, addScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addButton = (Button)findViewById(R.id.eventAddButton);
-        addName = (EditText)findViewById(R.id.event_name);
-        addAge = (EditText)findViewById(R.id.event_age);
-        addScore = (EditText)findViewById(R.id.event_score);
+        setContentView(R.layout.activity_event_add);
 
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+        addButton2 = (Button) findViewById(R.id.eventAddButton);
+        addName = (EditText) findViewById(R.id.event_name);
+        addAge = (EditText) findViewById(R.id.event_age);
+        addScore = (EditText) findViewById(R.id.event_score);
+
+        addButton2.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                if(addName.equals("") == false) {
-                    if(addAge.equals("") == false) {
-                        if(addScore.equals("") == false) {
+                Log.w("add - ", "in");
+                if(addName.getText().toString().equals("") == false) {
+                    if(addAge.getText().toString().equals("") == false) {
+                        if(addScore.getText().toString().equals("") == false) {
 
                             MainActivity.ddbbEventName[ ++ MainActivity.ddbbEventCnt ] = addName.getText().toString();
                             MainActivity.ddbbEventAge[ MainActivity.ddbbEventCnt ] = Integer.parseInt(addAge.getText().toString());
@@ -61,30 +65,5 @@ public class eventAddActivity extends ActionBarActivity {
                 }
             }
         });
-
-        setContentView(R.layout.activity_event_add);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_event_add, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

@@ -110,7 +110,6 @@ public class menu2_Fragment extends Fragment {
                     //addButton.setOnClickListener(this);
                     addButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            Log.w("menu2_fragment - ", "add");
                             Intent intent = new Intent(getActivity(), eventAddActivity.class);
                             startActivityForResult(intent, 1);
                         }
